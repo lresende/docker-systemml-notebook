@@ -18,6 +18,7 @@
 
 export MASTER=spark://localhost:7077 
 export SPARK_HOME=/opt/spark
+export SPARK_SUBMIT_OPTIONS="--jars /opt/systemml/systemml-0.9.0-incubating.jar"
 export ZEPPELIN_PORT=8081
 export ZEPPELIN_SPARK_USEHIVECONTEXT=false
 

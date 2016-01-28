@@ -38,6 +38,12 @@ ADD zeppelin/conf/zeppelin-env.sh /opt/zeppelin-0.5.6-incubating-bin-all/conf/
 ENV ZEPPELIN_HOME /opt/zeppelin
 
 #####################
+# SystemML
+
+RUN mkdir /opt/systemml && \
+    cd /opt/systemml && curl -s "http://people.apache.org/~lresende/systemml/0.9.0-rc3/systemml-0.9.0-incubating.jar"
+
+#####################
 # clean yum cache
 
 RUN yum clean all
