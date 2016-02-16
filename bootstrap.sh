@@ -34,6 +34,9 @@ $SPARK_HOME/sbin/start-all.sh
 
 $ZEPPELIN_HOME/bin/zeppelin-daemon.sh start
 
+$HADOOP_PREFIX/bin/hadoop fs -mkdir -p /datasets/nyc-311-service
+$HADOOP_PREFIX/bin/hadoop fs -put /opt/datasets/nyc-311-service/*.csv /datasets/nyc-311-service/
+
 if [[ $1 = "-d" || $2 = "-d" ]]; then
   while true; do sleep 1000; done
 fi
