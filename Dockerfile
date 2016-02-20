@@ -33,7 +33,7 @@ RUN curl -s 'https://dist.apache.org/repos/dist/release/incubator/zeppelin/0.5.6
     rm -rf zeppelin-0.5.6-incubating-bin-all.tgz && \
     cd /opt && ln -s ./zeppelin-0.5.6-incubating-bin-all zeppelin
 
-ADD zeppelin/conf/zeppelin-env.sh /opt/zeppelin-0.5.6-incubating-bin-all/conf/
+ADD zeppelin/conf/zeppelin-env.sh /opt/zeppelin/conf/
 
 ENV ZEPPELIN_HOME /opt/zeppelin
 
@@ -43,7 +43,7 @@ ENV ZEPPELIN_HOME /opt/zeppelin
 RUN mkdir /opt/systemml && \
     cd /opt/systemml && curl -s 'http://www.apache.org/dist/incubator/systemml/0.9.0-incubating/systemml-0.9.0-incubating.jar' -o systemml-0.9.0-incubating.jar
 
-ADD zeppelin/notebook/ /opt/zeppelin-0.5.6-incubating-bin-all/notebook
+ADD zeppelin/notebook/ /opt/zeppelin/notebook
 RUN mkdir /opt/datasets
 ADD datasets /opt/datasets
 
