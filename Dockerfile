@@ -18,7 +18,7 @@
 # Basic CentoOS Image
 #
 
-FROM lresende/spark:1.6.0
+FROM lresende/spark:2.2.0
 MAINTAINER Luciano Resende lresende@apache.org
 
 USER root
