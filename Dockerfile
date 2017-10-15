@@ -29,9 +29,9 @@ RUN yum clean all
 #####################
 # Zeppelin
 
-RUN curl -s 'https://dist.apache.org/repos/dist/release/incubator/zeppelin/0.5.6-incubating/zeppelin-0.5.6-incubating-bin-all.tgz' | tar -xz -C /opt/ && \
-    rm -rf zeppelin-0.5.6-incubating-bin-all.tgz && \
-    cd /opt && ln -s ./zeppelin-0.5.6-incubating-bin-all zeppelin
+RUN curl -s 'http://archive.apache.org/dist/zeppelin/zeppelin-0.7.3/zeppelin-0.7.3-bin-all.tgz' | tar -xz -C /opt/ && \
+    rm -rf zeppelin-0.7.3-bin-all.tgz && \
+    cd /opt && ln -s ./zeppelin-0.7.3-bin-all zeppelin
 
 ADD zeppelin/conf/zeppelin-env.sh /opt/zeppelin/conf/
 
