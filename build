@@ -28,8 +28,8 @@ fi
 ## build docker image
 if [[ $platform == 'osx' ]]; then
   docker rmi -f lresende/systemml
-  docker build --rm --no-cache -t lresende/systemml .
+  docker build --rm --no-cache -t lresende/systemml:0.15 .
 else
   sudo docker rmi -f lresende/systemml
-  sudo docker build --rm --no-cache -t lresende/systemml .
+  sudo docker build --rm --no-cache -t lresende/systemml:0.15 .
 fi
