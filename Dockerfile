@@ -41,7 +41,7 @@ ENV ZEPPELIN_HOME /opt/zeppelin
 # SystemML
 
 RUN mkdir /opt/systemml && \
-    cd /opt/systemml && curl -s 'http://www.apache.org/dist/incubator/systemml/0.9.0-incubating/systemml-0.9.0-incubating.jar' -o systemml-0.9.0-incubating.jar
+    cd /opt/systemml && curl -s 'https://repository.apache.org/content/repositories/releases/org/apache/systemml/systemml/0.15.0/systemml-0.15.0.jar' -o systemml-0.15.0.jar
 
 ADD zeppelin/notebook/ /opt/zeppelin/notebook
 RUN mkdir /opt/datasets
